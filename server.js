@@ -23,7 +23,6 @@ app.use((req, res, next) => {
 });
 
 
-app.listen(3000, '0.0.0.0', () => {
-  console.log('Server is running on 0.0.0.0:3000');
+app.listen(process.env.PORT || 5000, '0.0.0.0', () => {
+  console.log('Server is running on 0.0.0.0:5000');
 });
-
