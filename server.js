@@ -23,6 +23,6 @@ app.use((req, res, next) => {
 });
 
 
-app.listen(3000, '0.0.0.0', () => {
-  console.log('Server is listening on port 3000');
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+  console.log(`Server is listening on port ${process.env.PORT || 3000}`);
 });
