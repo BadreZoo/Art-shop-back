@@ -5,8 +5,13 @@ const client = new Client({
   connectionString: process.env.PG_URL
 });
 
-// Connecter le client
-client.connect();
+try {
+  // Connecter le client
+  client.connect();
+  console.log("Connected to PostgreSQL");
+} catch (error) {
+  console.error("Error connecting to PostgreSQL:", error);
+}
 
 // Exporter le client connecté
 module.exports = client;
