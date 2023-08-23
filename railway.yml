@@ -1,0 +1,9 @@
+services:
+  web:
+    # ...
+    routes:
+      # ...
+    env:
+      # ...
+      # Ajoutez ou modifiez cette ligne pour spécifier l'adresse IP
+      RAILWAY_BIND: 0.0.0.0
