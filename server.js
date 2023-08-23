@@ -11,7 +11,6 @@ app.use(cors({
   origin: 'https://stellar-narwhal-6636af.netlify.app' // Remplacez par l'URL correcte de votre front-end
 }));
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -22,7 +21,7 @@ app.use((req, res, next) => {
   res.status(404).json({ message });
 });
 
-
-app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
-  console.log(`Server is listening on port ${process.env.PORT || 3000}`);
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is listening on port ${port}`);
 });
