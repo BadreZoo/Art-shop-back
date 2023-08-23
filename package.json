@@ -13,5 +13,9 @@
     "pg": "^8.11.1",
     "pg-promise": "^11.5.4",
     "stripe": "^12.16.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
+  
 }
