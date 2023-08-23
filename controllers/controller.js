@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const jwt = require('jsonwebtoken');
 
-// Maintenant vous pouvez utiliser l'API Stripe dans votre backend
+
 
 
 const controller={
