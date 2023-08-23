@@ -5,8 +5,9 @@ const userControllers = require('../controllers/userController');
 const validate = require('../validation/validator');
 const schemaUser = require('../validation/user.shema');
 const auth = require("../auth/auth");
+const { client } = require("../data/database"); // Importez le client de la base de données
 
-
+// Code du reste de vos routes
 
 router.post("/signup", validate(schemaUser, 'body'), controller.addNewUser);
 router.post("/login", userControllers.login);
@@ -19,13 +20,7 @@ router.delete("/remove-from-cart/:productId", auth, controller.removeProduct);
 router.put('/update-quantity/:productId', auth,controller.updateProductQuantity);
 router.delete("/clear-cart", auth, controller.clearCart);
 router.get("/set-cookie", controller.setCookie);
-// This example sets up an endpoint using the Express framework.
-// Watch this video to get started: https://youtu.be/rPR2aJ6XnAc.
+router.post('/create-checkout-session',controller.createCheckoutSession);
 
-
-router.post('/create-checkout-session',controller.createCheckoutSession)
-
-
-
-
+// Exportez le router
 module.exports = router;

@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: 'http://localhost:3000' // Replace with the allowed origin(s) of your front-end application
+  origin: 'https://stellar-narwhal-6636af.netlify.app' // Replace with the allowed origin(s) of your front-end application
 }));    
 
 app.use(express.json());
