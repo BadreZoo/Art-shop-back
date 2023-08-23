@@ -6,7 +6,9 @@ const client = new Client({
 });
 
 // Connecter le client
-client.connect();
+client.connect().catch(error => {
+  console.error("Error connecting to PostgreSQL:", error);
+});
 
 // Exporter le client connecté
 module.exports = client;
