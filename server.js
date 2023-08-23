@@ -22,7 +22,8 @@ app.use((req, res, next) => {
   res.status(404).json({ message });
 });
 
-const PORT = process.env.PORT;
-server.listen(PORT, () => {
-  console.log(`Serveur en écoute sur le port ${PORT}`);
+
+app.listen(3000, '0.0.0.0', () => {
+  console.log('Server is running on 0.0.0.0:3000');
 });
+
