@@ -1,4 +1,4 @@
-//Require JWT
+
 const jwt = require("jsonwebtoken");
 const dataMapper = require('../datamaper/datamaper');
 const bcrypt = require('bcrypt');
