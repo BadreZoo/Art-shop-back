@@ -22,5 +22,5 @@ router.delete("/clear-cart", auth, controller.clearCart);
 router.get("/set-cookie", controller.setCookie);
 router.post('/create-checkout-session',controller.createCheckoutSession);
 
-// Exportez le router
+
 module.exports = router;
