@@ -17,7 +17,7 @@ const userControllers = {
       if(!alreadyExistingUser){
         return res.status(404).json({message : "mail ou mot de passe incorrect"});
       }
-      //verify if the password is in db
+      
       const match = await bcrypt.compare(password, alreadyExistingUser.password);
       if(!match){
         return res.status(404).json({message : "mail ou mot de passe incorrect"});
