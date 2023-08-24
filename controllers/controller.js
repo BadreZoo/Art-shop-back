@@ -2,8 +2,9 @@
 const dataMapper = require('../datamaper/datamaper');
 const emailValidator = require('email-validator');
 const bcrypt = require('bcrypt');
-// Exemple côté backend (serveur)
+
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+
 const jwt = require('jsonwebtoken');
 
 
