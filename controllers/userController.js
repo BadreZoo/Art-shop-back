@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 
 
-// JWT authentificator verification / create token
+
 const userControllers = {
 
   login: async (req, res) => {
