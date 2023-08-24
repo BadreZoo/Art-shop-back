@@ -11,7 +11,7 @@ const userControllers = {
   login: async (req, res) => {
     try{
       const {email, password} = req.body;
-      //verify if the email is in db
+    
       const alreadyExistingUser = await dataMapper.getuserFromEmail(email);
 
       if(!alreadyExistingUser){
