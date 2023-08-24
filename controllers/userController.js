@@ -22,7 +22,7 @@ const userControllers = {
       if(!match){
         return res.status(404).json({message : "mail ou mot de passe incorrect"});
       }
-      //generate jwt token
+      
       if(email === alreadyExistingUser.email && match){
         const id = alreadyExistingUser.id;
         const token = jwt.sign(
