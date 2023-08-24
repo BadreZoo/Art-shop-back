@@ -2,7 +2,7 @@ services:
   web:
     # ...
     routes:
-      # ...
+      
     env:
       
       # Ajoutez ou modifiez cette ligne pour spécifier l'adresse IP
