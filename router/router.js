@@ -7,7 +7,7 @@ const schemaUser = require('../validation/user.shema');
 const auth = require("../auth/auth");
 const { client } = require("../data/database"); // Importez le client de la base de données
 
-// Code du reste de vos routes
+
 
 router.post("/signup", validate(schemaUser, 'body'), controller.addNewUser);
 router.post("/login", userControllers.login);
