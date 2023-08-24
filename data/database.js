@@ -1,4 +1,3 @@
-
 const { Client } = require("pg");
 
 // Charger la valeur de DATABASE_URL depuis les variables d'environnement
@@ -7,9 +6,7 @@ const client = new Client({
 });
 
 // Connecter le client
-client.connect().then(() => {
-  console.log("Connected to PostgreSQL");
-}).catch(error => {
+client.connect().catch(error => {
   console.error("Error connecting to PostgreSQL:", error);
 });
 
