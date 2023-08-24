@@ -14,7 +14,7 @@ const verifyToken = (req, res, next) => {
     next();
   } catch (err) {
     if (err.response && err.response.status === 401 && err.response.data.message === "jeton d'authentification invalide")  {
-      // Si le jeton a expiré, supprimez-le du local storage
+      
       localStorage.removeItem('token');
       return res.status(401).json({ message: "Votre session a expiré. Vous avez été déconnecté." });
     }
