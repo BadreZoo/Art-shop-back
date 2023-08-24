@@ -8,7 +8,7 @@ const app = express();
 const server = http.createServer(app);
 
 app.use(cors({
-  origin: 'https://stellar-narwhal-6636af.netlify.app' // Remplacez par l'URL correcte de votre front-end
+  origin: 'https://stellar-narwhal-6636af.netlify.app' 
 }));
 
 app.use(express.json());
