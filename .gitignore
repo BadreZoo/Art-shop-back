@@ -28,7 +28,7 @@ out/
 package-lock.json
 yarn.lock
 
-# Ignore database files
+
 *.sqlite
 *.db
 *.log
